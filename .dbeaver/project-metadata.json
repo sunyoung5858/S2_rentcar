@@ -1,0 +1,1 @@
+{"resources":{"src/main/webapp/S2_Rentcar/S2_Rentcar_db_damin_reservation.sql":{"default-datasource":"oracle_thin-1887a2959f0-307047898c6a307e","default-schema":"SCOTT"},"src/main/webapp/S2_Rentcar/S2_Rentcar_db_tot.sql":{"default-schema":"SCOTT","default-datasource":"oracle_thin-1887a2959f0-307047898c6a307e"}}}

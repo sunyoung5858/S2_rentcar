@@ -1,0 +1,37 @@
+1. 기본 개념 및 구성 요소
+   - JSP의 개념과 동작 원리 이해
+   - JSP의 기본 구성 요소 (디렉티브, 스크립트 요소, 액션 태그 등) 학습
+
+2. JSP 문법과 문서 작성
+   - JSP 문법의 기본 구조 및 문법 규칙 이해
+   - JSP 문서 작성 방법과 주석 처리
+   - 변수, 데이터 타입, 연산자 등의 사용 방법 학습
+
+3. 스크립트 요소와 표현식
+   - JSP에서의 스크립트 요소 (스크립트릿, 표현식, 선언) 사용법 학습
+   - 자바 코드를 사용하여 동적 데이터 처리
+
+4. JSP 기본 객체와 내장 객체
+   - JSP의 기본 객체 (request, response, session, application 등) 이해
+   - 내장 객체의 속성과 메서드 활용 방법 학습
+
+5. JSP 액션 태그와 데이터 처리
+   - JSP 액션 태그의 종류와 사용법 학습
+   - 데이터 처리를 위한 액션 태그 (useBean, setProperty, getProperty 등) 학습
+
+6. JSP 디자인 패턴과 MVC 구조
+   - JSP에서의 디자인 패턴 (Front Controller, Model-View-Controller) 이해
+   - JSP를 활용한 MVC 구조의 개발 방법 학습
+
+7. JSP와 데이터베이스 연동
+   - JSP에서 데이터베이스에 접근하여 데이터 조작하는 방법 학습
+   - JDBC(Java Database Connectivity)를 활용한 데이터베이스 연동
+
+8. JSP의 보안과 예외 처리
+   - JSP 보안 관련 주요 개념 이해 (인증, 인가, XSS 방어 등)
+   - 예외 처리와 오류 페이지 설정 방법 학습
+
+9. JSP와 다양한 웹 기술과의 통합
+    - JSP와 HTML, CSS, JavaScript 등 다양한 웹 기술과의 통합 방법 학습
+    - AJAX - RESTful 웹 서비스 등과의 연동 방법 이해
+

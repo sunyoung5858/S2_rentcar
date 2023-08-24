@@ -1,0 +1,91 @@
+/*상단 네비바*/
+.top-loc{
+	padding-left: 20px;
+	margin-top:10px;
+    font-weight:bold;
+}
+.loc{
+	padding-left: 20px;
+	width:100%;
+	/*border-bottom: solid 1px #c6c6c6;*/
+    height: 43px;
+}
+.locCon{
+	display: flex;
+    align-items: center;
+    height: 42px;
+    color: balck;
+    font-size: 15px;
+}
+.locImg{
+    width: 8px;
+    margin-top: 3px;
+    margin: 2px 10px 0px 10px;
+}
+/*본문영역*/
+.main-box{
+	padding-left: 20px;
+	padding-right: 40px;
+}
+/*검색창*/
+.search-box {
+	height: 200px;
+	margin-top: 20px;
+	border: solid 1px lightgray;
+	border-radius: 5px;
+}
+.search-box form ul {
+	margin-left: 30px;
+	padding-top:10px;
+	margin-bottom: 20px;
+}
+.search-box form ul li{
+	padding-top:20px;
+	list-style-type: none;
+}
+.search-box form ul li span{
+	font-weight: bold;	
+}
+.search-box form ul li label {
+	margin-left: 15px;
+}
+#selectedValue{
+	width:260px;
+}
+.search-box button {
+	margin-left: 60px;
+	padding: 10px 25px;
+	background-color: #0080ff;
+	color: white;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+}
+/*조회테이블*/
+#list-count{
+	margin-top: 50px;
+}
+.list-table{
+	height: 600px;
+	margin-top: 5px;
+	border: solid 1px lightgray;
+	border-radius: 5px;
+	padding-top:10px;
+}
+.list-table table{
+	margin:0 auto;
+	width:97%;
+	padding: 10px;
+}
+.list-table tr{
+	text-align:center;
+	margin:5px;
+	border-bottom: solid 1px lightgray; 
+}
+.list-table th,td{
+	text-align:center;
+	padding:10px;
+}
+.list-table td button{
+	border: solid 1px gray;
+}

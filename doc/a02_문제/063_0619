@@ -1,0 +1,124 @@
+[1단계:개념] 1. 요청값과 다중데이터 처리, form 형식 처리, form의 여러가지 형식에 따른 처리를 조원들과 함께 먼저 정리한 후 아래 문제를 풀어보세요.
+- 요청값 처리:(query string - 페이지?key=val&key2=val2)
+  - 클라이언트에서 서버로 데이터를 전송할 때, 요청값을 함께 전송합니다.
+      request.getParameter("key")
+      // 동일한 key로 다른 값들이 여러개 할당되었을 때
+      페이지?key1=val1&key1=val2&key1=val3
+      request.getParameterValues("key1")  
+  
+  - 주로 HTML의 form 요소를 사용하여 사용자로부터 데이터를 입력받고,
+      이를 서버로 전송합니다.
+      <form action="페이지">ㅣ
+      <input name="key" value="val">
+      <input name="key1" value="val1">
+      <input name="key1" value="val2">
+      <input name="key1" value="val3">
+
+  - 요청값은 서버에서 처리하고자 하는 작업의 매개변수로 사용됩니다.
+
+- 다중데이터 처리:
+  - 다중데이터는 여러 개의 값을 가지는 데이터를 의미합니다.
+  - 예를 들어, 체크박스에서 여러 개의 옵션을 선택하는 경우,
+       select 요소(multiple)에서 여러 개의 옵션을 선택하는 경우 등이 있습니다.
+  - 다중데이터는 배열 형태로 서버에서 받는다.
+  - 서버에서는 받은 배열을 순회하면서 각각의 값을 처리할 수 있습니다.
+    if(req!=null)
+    	for(int idx=0;idx<req.length;idx++){
+    	    // 입력값 없는 데이터 제외 처리..
+    		if(res[idx]!=null&& !req[idx].trim().equals(""))
+    		문자열일 때  String res[idx]
+    		숫자형일 때  int 숫자변수 = Integer.parseInt(res[idx]);
+    	}
+
+- form 형식 처리:
+  - HTML의 form 요소를 사용하여 사용자로부터 데이터를 입력받고, 서버로 전송하는 방식입니다.
+  - form은 다양한 형식을 가질 수 있으며, 각각의 형식에 따라 입력 데이터의 처리 방식이 다를 수 있습니다.
+  - 일반적으로 form 요소의 action 속성에는 데이터를 처리할 서버 프로그램의 경로를 지정하고, method 속성에는 데이터 전송 방식(GET 또는 POST)을 지정합니다.
+
+- form의 여러가지 형식에 따른 처리:
+  - form은 다양한 형식의 입력 요소를 포함할 수 있습니다.
+  - 대표적인 형식에는 텍스트 입력란(input type="text"),
+     체크박스(input type="checkbox"), 
+      라디오 버튼(input type="radio"), 선택 리스트(select), 텍스트 영역(textarea) 등이 있습니다.
+  - 각각의 형식에 따라 사용자로부터 입력된 데이터의 처리 방식이 다르며, 서버에서는 해당 형식에 맞춰 데이터를 추출하여 처리합니다.
+
+
+
+[1단계:코드] 2. form 형식으로 다중 처리하는 예제를 
+  아래 3가지 형식으로 선언하고 다음 페이지에 출력하세요.
+   1) 구매할 물건명 입력(type=text)
+   2) 결재할 물건의 가격(type=checkbox) : 선택된 것만
+   3) select로 구매할 물건의 가격 : ctrl로 선택된 것만
+
+```jsp
+<!DOCTYPE html>
+<html>
+<head>
+  <title>다중 처리 예제</title>
+</head>
+<body>
+  <form action="process.jsp" method="post">
+    <label for="product">구매할 물건명 입력:</label>
+    <input type="text" name="product"><br><br>
+    <input type="text" name="product"><br><br>
+    <input type="text" name="product"><br><br>
+
+    <label for="price">결재할 물건의 가격:</label><br>
+    <input type="checkbox" id="price1" name="price" value="1000">
+    <label for="price1">1000원</label><br>
+    <input type="checkbox" id="price2" name="price" value="2000">
+    <label for="price2">2000원</label><br>
+    <input type="checkbox" id="price3" name="price" value="3000">
+    <label for="price3">3000원</label><br><br>
+
+    <label for="select_price">select로 구매할 물건의 가격:</label><br>
+    <select id="select_price" name="select_price" multiple>
+      <option value="10000">10000원</option>
+      <option value="20000">20000원</option>
+      <option value="30000">30000원</option>
+      <option value="40000">40000원</option>
+    </select><br><br>
+
+    <input type="submit" value="전송">
+  </form>
+</body>
+</html>
+```
+
+위의 코드를 `form.jsp` 파일로 저장한 후 웹 브라우저에서 열면 다중 처리 예제 폼을 확인할 수 있습니다.
+
+[1단계:코드] 3. Bootstrap 형식으로 회원 등록 화면 form을 만들고, 등록 시 요청값을 받아 VO 객체로 생성하고 출력한 내용을 처리하세요.
+
+```jsp
+<!DOCTYPE html>
+<html>
+<head>
+  <title>회원 등록 화면</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>회원 등록</h1>
+    <form action="process.jsp" method="post">
+      <div class="form-group">
+        <label for="name">이름:</label>
+        <input type="text" class="form-control" id="name" name="name">
+      </div>
+      <div class="form-group">
+        <label for="email">이메일:</label>
+        <input type="email" class="form-control" id="email" name="email">
+      </div>
+      <div class="form-group">
+        <label for="password">비밀번호:</label>
+        <input type="password" class="form-control" id="password" name="password">
+      </div>
+      <button type="submit" class="btn btn-primary">등록</button>
+    </form>
+  </div>
+</body>
+</html>
+```
+
+위의 코드를 `register.jsp` 파일로 저장한 후 웹 브라우저에서 열면 Bootstrap 형식의 회원 등록 화면을 확인할 수 있습니다. 등록 버튼을 클릭하면 `process.jsp` 파일에서 요청값을 받아 VO 객체로 생성하고 해당 내용을 처리할 수 있습니다.
+
+위의 예제 코드는 실습을 위한 JSP 코드이며, 서버 측에서 요청값을 처리할 JSP 파일이 필요합니다. 해당 파일은 별도로 작성해야 합니다.

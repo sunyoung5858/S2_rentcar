@@ -1,0 +1,110 @@
+/*상단 네비바*/
+.loc{
+    padding-left: 20px;
+    width:100%;
+    /*border-bottom: solid 1px #c6c6c6;*/
+    height: 43px;
+}
+.locCon{
+    display: flex;
+    align-items: center;
+    height: 42px;
+    color: balck;
+    font-size: 15px;
+}
+.locImg{
+    width: 8px;
+    margin-top: 3px;
+    margin: 2px 10px 0px 10px;
+}
+/*날짜선택*/
+.left-box{
+    border: solid 1px lightgray;
+    /*background-color: rgb(242, 242, 242);*/
+    padding:50px 50px 0 50px;
+    border-radius: 5px;
+    box-shadow: -3px 3px 10px 5px lightgray;
+}
+.date-title{
+    font-weight: 600;
+}
+.date-box{
+    padding:30px;
+}
+.startdate{
+    width: 49%;
+    float:left;
+    padding: 5px;
+}
+.enddate{
+    width: 49%;
+    float:right;
+    padding: 5px;
+}
+.notic-box{
+    padding:10px;
+    margin-top: 280px;
+    width:100%;
+}
+.notic-box p{
+    width:100%;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(230, 230, 230);
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+
+/*예매오른쪽박스*/
+.inner-box{
+    background-color: rgb(55, 55, 55);
+    border-bottom:solid 0.1px white;
+    padding-left:20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+.spr-box-1{
+    padding-left: 10px;
+    border-bottom:solid 0.1px lightgray;
+    width: 100%;
+    /*background-color: aliceblue;*/
+}
+.spr-box-1 p{
+    padding-top: 10px;
+    display:inline-block; 
+    color: rgb(208, 208, 208);
+    font-size: 18px;
+    font-weight:600;
+    /*background-color: bisque;*/
+}
+.spr-box-1 a{
+    padding-left: 10px;
+}
+.spr-box-1 a p{
+    display:inline-block; 
+    font-size: 15px;
+    color: #7195dd;
+    font-weight:600
+}
+.spr-box-2{
+    margin-left: auto; 
+}
+.spr-box-2 p{
+    padding-top: 20px;
+    padding-left: 10px;
+    display:inline-block; 
+    font-size: 15px;
+    font-weight:400;
+    color: white;
+}
+.inner-box button{
+	border:none;
+	font-size:18px;
+	color:white;
+	font-weight:600;
+
+}
